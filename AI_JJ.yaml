@@ -1,0 +1,103 @@
+payload:
+  # =========================================
+  # 核心修复区：Google AI (Gemini / NotebookLM)
+  # =========================================
+  # 说明：为了防止 Google 账号风控和区域检测跳变，
+  # 必须强制 Google 的登录、API、静态资源全部走 AI 节点。
+  
+  # 1. 登录与身份验证 (最关键，防止跳 IP)
+  - DOMAIN,accounts.google.com
+  - DOMAIN-SUFFIX,account.google.com
+  
+  # 2. AI 专属入口
+  - DOMAIN-SUFFIX,gemini.google.com
+  - DOMAIN-SUFFIX,notebooklm.google
+  - DOMAIN-SUFFIX,notebooklm.google.com
+  - DOMAIN-SUFFIX,aistudio.google.com
+  - DOMAIN-SUFFIX,makersuite.google.com
+  - DOMAIN-SUFFIX,deepmind.google
+  - DOMAIN-SUFFIX,deepmind.com
+  - DOMAIN-SUFFIX,generativeai.google
+  - DOMAIN-SUFFIX,bard.google.com
+  
+  # 3. 核心 API 与 后端 (Client6, Generative Language)
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com
+  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+  - DOMAIN-SUFFIX,apis.google.com
+  - DOMAIN,waa-pa.clients6.google.com
+  - DOMAIN,alkalicore-pa.clients6.google.com
+  
+  # 4. Google 基础设施兜底 (图片、用户数据、通用服务)
+  - DOMAIN-SUFFIX,googleusercontent.com
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-SUFFIX,gcr.io
+  - DOMAIN-SUFFIX,pkg.dev
+  
+  # 5. 暴力兜底 (防止漏网之鱼，如 new-feature.google.com)
+  - DOMAIN-SUFFIX,google.com
+
+  # =========================================
+  # 第一梯队：AI 编程工具 (Code IDEs)
+  # =========================================
+  # > Cursor
+  - DOMAIN-SUFFIX,cursor.sh
+  - DOMAIN-SUFFIX,cursorapi.com
+  
+  # > Windsurf / Codeium
+  - DOMAIN-SUFFIX,windsurf.com
+  - DOMAIN-SUFFIX,codeium.com
+  - DOMAIN-SUFFIX,codeiumdata.com
+  
+  # > Zed Editor AI
+  - DOMAIN-SUFFIX,zed.dev
+  
+  # > GitHub Copilot
+  - DOMAIN-SUFFIX,githubcopilot.com
+  - DOMAIN-SUFFIX,copilot.microsoft.com
+  - DOMAIN,api.github.com
+
+  # > JetBrains AI
+  - DOMAIN-SUFFIX,jetbrains.ai
+
+  # =========================================
+  # 第二梯队：主流大模型 (LLMs)
+  # =========================================
+  # > OpenAI / ChatGPT
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,ai.com
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
+  - DOMAIN,gateway.ai.cloudflare.com
+  - DOMAIN,openaiapi-site.azureedge.net
+  - DOMAIN-KEYWORD,openaicom
+  
+  # > Anthropic / Claude
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claudeusercontent.com
+  
+  # > Perplexity AI
+  - DOMAIN-SUFFIX,perplexity.ai
+  
+  # > Grok (xAI)
+  - DOMAIN-SUFFIX,x.ai
+  - DOMAIN-SUFFIX,grok.com
+  
+  # > Meta AI
+  - DOMAIN-SUFFIX,meta.ai
+
+  # =========================================
+  # 其他 AI 服务
+  # =========================================
+  # > Groq (高速推理)
+  - DOMAIN-SUFFIX,groq.com
+  # > POE (聚合平台)
+  - DOMAIN-SUFFIX,poe.com
+  # > Jasper
+  - DOMAIN-SUFFIX,jasper.ai
+  # > Sora
+  - DOMAIN-SUFFIX,sora.com
+  # > Dify
+  - DOMAIN-SUFFIX,dify.ai
