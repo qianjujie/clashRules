@@ -101,3 +101,5 @@ payload:
   - DOMAIN-SUFFIX,sora.com
   # > Dify
   - DOMAIN-SUFFIX,dify.ai
+  # > ipify
+  - DOMAIN-SUFFIX,ipify.org
