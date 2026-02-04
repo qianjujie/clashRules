@@ -103,3 +103,5 @@ payload:
   - DOMAIN-SUFFIX,dify.ai
   # > ipify
   - DOMAIN-SUFFIX,ipify.org
+  # > other
+  - DOMAIN-SUFFIX,googlevideo.com
