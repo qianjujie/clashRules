@@ -94,7 +94,3 @@ payload:
   
   # > 修复 ipify 报错 (让它跟着 AI 节点走代理)
   - DOMAIN-SUFFIX,ipify.org
-  
-  # > Steam 商店/社区 (必须走代理才能打开，放这里没问题)
-  - DOMAIN-SUFFIX,steamcommunity.com
-  - DOMAIN-SUFFIX,steampowered.com
