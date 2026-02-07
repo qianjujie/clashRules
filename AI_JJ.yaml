@@ -91,6 +91,9 @@ payload:
   - DOMAIN-SUFFIX,jasper.ai
   - DOMAIN-SUFFIX,sora.com
   - DOMAIN-SUFFIX,dify.ai
+  - DOMAIN-SUFFIX,languagereactor.com
+  - DOMAIN-SUFFIX,dioco.io
+  - DOMAIN-SUFFIX,cloudfunctions.net
   
   # > 修复 ipify 报错 (让它跟着 AI 节点走代理)
   - DOMAIN-SUFFIX,ipify.org
