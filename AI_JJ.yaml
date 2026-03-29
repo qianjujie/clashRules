@@ -101,3 +101,10 @@ payload:
   
   # > 修复 ipify 报错 (让它跟着 AI 节点走代理)
   - DOMAIN-SUFFIX,ipify.org
+  
+  # docker
+  - DOMAIN-SUFFIX,docker.com
+  - DOMAIN-SUFFIX,docker.io
+  - DOMAIN-SUFFIX,docker.registry.io
+  - DOMAIN-SUFFIX,ecr.aws
+  - DOMAIN-KEYWORD,docker
